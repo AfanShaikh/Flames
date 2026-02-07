@@ -1,0 +1,179 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.game-container {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 350px;
+}
+
+h1 {
+  color: #764ba2;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #f0f0f0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  flex: 2;
+  background: #764ba2;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.share-btn {
+  background: #25d366;
+  margin-top: 15px;
+  width: 100%;
+  display: none;
+}
+
+button.reset-btn {
+  flex: 1;
+  background: #f0f0f0;
+  color: #333;
+}
+
+#result {
+  margin-top: 25px;
+  min-height: 50px;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.03);
+  }
+}
+
+.calculating {
+  animation: pulse 0.6s infinite alternate;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.final-result {
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ff416c;
+}
+
+@media (max-width: 360px) {
+  .game-container {
+    width: 90%;
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  input,
+  button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .final-result {
+    font-size: 1.4rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+    .game-container {
+        width: 85%;
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+
+    input, button {
+        font-size: 0.95rem;
+    }
+
+    .final-result {
+        font-size: 1.6rem;
+    }
+}
+
+
+@media (max-width: 720px) {
+
+    .game-container {
+        width: 400px;
+        padding: 2.2rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .final-result {
+        font-size: 1.7rem;
+    }
+}

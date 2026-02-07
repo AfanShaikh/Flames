@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLAMES - Destiny Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="game-container" id="card">
+      <h1>🔥 FLAMES</h1>
+      <p>Discover your relationship's fate</p>
+
+      <input type="text" id="name1" placeholder="Name 1" autocomplete="off" />
+      <input type="text" id="name2" placeholder="Name 2" autocomplete="off" />
+
+      <div class="btn-group">
+        <button onclick="calculateFlames()">Reveal Destiny</button>
+        <button class="reset-btn" onclick="resetGame()">Reset</button>
+      </div>
+
+      <div id="result"></div>
+
+      <button id="shareBtn" class="share-btn" onclick="shareResult()">
+        Share Result 📲
+      </button>
+    </div>
+  </body>
+  <script src="./script.js">
+  </script>
+</html>
